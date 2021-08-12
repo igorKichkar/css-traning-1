@@ -1,0 +1,145 @@
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    color:azure;
+    background-image: url('/images/bg-desktop.svg');
+    background-color: hsl(257, 40%, 49%);
+    background-size:auto;
+    background-repeat: no-repeat;
+    padding: 5%;
+}
+
+.container{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+                    "head head"
+                    "boxImg contentText"
+                    "linkSocialNetwork linkSocialNetwork";
+}
+
+.head{
+    grid-area: head;
+}
+
+.logo{
+    padding-top: 1vw;
+    padding-left: 2vw;
+}
+
+.boxImg{
+    grid-area: boxImg;
+    padding-top:5%; 
+    padding-bottom:5%; 
+}
+
+.imgContent{  
+    width: 40vw;
+}
+
+.contentBlock{
+    grid-area: contentText;
+    padding: 20px;
+    font-size: 18pt;
+}
+
+.textContent{
+    padding-bottom: 15%;
+}
+
+.titleContent{
+    font-size: 32pt;
+}
+
+.linkSocialNetwork{
+    padding-right: 30px;
+    grid-area: linkSocialNetwork;
+    text-align: right;
+    transition-property: all;  
+    transition-duration: .2s;
+}
+
+.link{
+    width: 30px;
+    padding: 5px;
+    border: 2px solid rgb(53, 102, 207);
+    border-radius: 100%;
+    filter: brightness(0%) invert(1);
+}
+
+.link:hover{
+    filter: hue-rotate(90deg);
+}
+
+.buttomRegister{
+    border-radius: 50px;
+    width: 100px;
+    padding: 7px 80px 7px 80px;
+    background-color:aliceblue;
+    color:rgb(75, 16, 170);
+    transition-property: background-color color;  
+    transition-duration: 1s; 
+}
+
+.buttomRegister:link{
+    text-decoration: none;
+}
+
+p{
+    text-align: center;
+}
+
+.linkFote:link{
+    color: white;
+}
+
+.linkFoter:visited{
+    color: white;
+}
+.buttomRegister:hover{
+    background-color:rgb(252, 92, 204);
+    color:aliceblue;
+   
+}
+
+@media screen and (max-device-width: 768px){
+    body{
+        background-image: url('/images/bg-mobile.svg');
+        background-size:100%;
+        min-width: 300px;
+    }
+    .container{
+        min-width: 400px;
+        display: grid;
+        text-align: center;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+                        "head"
+                        "boxImg"
+                         "contentText"
+                        "linkSocialNetwork"; 
+    }
+
+    .imgContent{
+        padding-top: 5%;
+        padding-bottom: 5%;
+        width: 95%;   
+    }
+
+    .head{
+        padding-top: 10px;
+        padding-left: 30px;
+        text-align: left;
+    }
+
+    .logo{
+        padding-left: .1vw;
+    }  
+
+    .linkSocialNetwork{
+        text-align: center;
+        padding-top: 5%;
+    }
+}
